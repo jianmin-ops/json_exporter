@@ -173,7 +173,7 @@ func FetchJson(ctx context.Context, logger log.Logger, endpoint string, c config
 		req.Header.Add(key, value)
 	}
 	if req.Header.Get("Accept") == "" {
-		req.Header.Add("Accept", "application/json")
+		req.Header.Add("Accept", "application/yang-data+json")
 	}
 	resp, err := client.Do(req)
 	if err != nil {
